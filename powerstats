@@ -1,0 +1,92 @@
+#!/bin/bash
+
+#Defaults
+export TITLE=idle
+export INTERVAL=2
+export MINUTES=60
+export NOTIFICATION=0
+export PROCESSLOG=60
+
+# Check options at start
+while test $# -gt 0; do
+        case "$1" in
+                -s|--stop)
+                        rm /dev/shm/powerstats-apps
+                        mv /dev/shm/powerstats-data /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}_aborted.log
+                        pkill powerstats-routine
+                        echo "Script aborted!"
+                        pkill powerstats 
+                        exit 0
+                        ;;
+                -h|--help)
+                        echo "Script to measure current power consumption"
+                        echo "on devices running SailfishOS."
+                        echo " "
+                        echo "EXAMPLE:"
+                        echo "./powerstats -i 1 -m 30 -n 1 -p 50 -t gps-moving "
+                        echo " "
+                        echo "options:"
+                        echo "-h, --help			show brief help"
+                        echo "-s, --stop			abort script"
+                        echo "-i, --interval=INTERVAL	specify interval (default = 2)"
+                        echo "-m, --minutes=MINUTES		specify measure time in minutes (default=60)"
+                        echo "-n, --notification=NOTIFICATION	set '1' for notification (default=0)"
+                        echo "-p, --processlog=PROCESSLOG	specify limit in mV for process logging (default=60)"
+                        echo "-t, --title=TITLE		specify a title for output file (default=idle)"
+                        exit 0
+                        ;;
+                -i)
+                        shift
+                        export INTERVAL=$1
+                        shift
+                        ;;
+                --interval*)
+                        export INTERVAL=$1
+                        shift
+                        ;;
+                -m)
+                        shift
+                        export MINUTES=$1
+                        shift
+                        ;;
+                --minutes*)
+                        export MINUTES=$1
+                        shift
+                        ;;
+                -n)
+                        shift
+                        export NOTIFICATION=$1
+                        shift
+                        ;;
+                --notification*)
+                        export NOTIFICATION=$1
+                        shift
+                        ;;
+                -p)
+                        shift
+                        export PROCESSLOG=$1
+                        shift
+                        ;;
+                --processlogvalue*)
+                        export PROCESSLOG=$1
+                        shift
+                        ;;
+                -t)
+                        shift
+                        export TITLE=$1
+                        shift
+                        ;;
+                --title*)
+                        export TITLE=$1
+                        shift
+                        ;;
+                *)
+                        pkill powerstats-routine
+                        pkill powerstats 
+                        ;;
+        esac
+done
+
+# Launch script with given values
+/home/nemo/.powerstats-routine start $TITLE $INTERVAL $MINUTES $PROCESSLOG $NOTIFICATION & exit
+   

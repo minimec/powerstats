@@ -1,0 +1,1905 @@
+##############################
+##
+##   ,---
+##   | Phone Info
+##   '---
+##   Phone model:  Nexus 5
+##   Device name:  hammerhead
+##   Mod version:  12.1-20160704-UNOFFICIAL-hammerhead [LMY49J]
+##   OS version:   SailfishOS 2.0.4.14 (Fiskarsinjoki) (armv7hl)
+##   Install Type: multirom
+##
+##   ,---
+##   | Current Phone Settings
+##   '---
+##   CPU Managment:  custom (blu_plug msm_mpdecision)
+##   Min/Max Freq:   249000*/1574000*
+##   Voltage Table:  modified
+##   CPU Governor:   conservative
+##   *(may be handled by custom CPU managment)
+##   !(WARNING: more than one cpu manager enabled)
+##
+##   Cell Provider:  Sunrise
+##   Mobile Data:    enabled/disconnected
+##   Wireless:       enabled/connected
+##   Bluetooth:      disabled/disconnected
+##   GPS Receiver:   disabled/disconnected
+##
+##   ,---
+##   | Running Applications
+##   '---
+##   /usr/bin/jolla-email -fullscreen
+##   /usr/bin/jolla-camera
+##   /usr/bin/jolla-calendar -prestart
+##   /usr/bin/jolla-mediaplayer -prestart
+##   /usr/bin/sailfish-browser -prestart
+##   /usr/bin/harbour-callrecorderd
+##   /usr/bin/harbour-sailorgram -daemon
+##   /usr/bin/harbour-fahrplan2
+##
+##   ,---
+##   | Power Statistics (Duration: 60min.) [Start: 2016-12-01-11h39m59s]
+##   '---
+##   below 30mV: 23% (416 polls)
+##   #######################
+##   below 40mV: 48% (861 polls)
+##   ################################################
+##   below 50mV: 8% (146 polls)
+##   ########
+##   below 60mV: 2% (35 polls)
+##   ##
+##   below 70mV: 2% (41 polls)
+##   ##
+##   below 80mV: 2% (31 polls)
+##   ##
+##   below 90mV: 5% (95 polls)
+##   #####
+##   below 100mV: 2% (44 polls)
+##   ##
+##   below 110mV: 1% (23 polls)
+##   #
+##   below 120mV: 2% (43 polls)
+##   ##
+##   below 130mV: 1% (26 polls)
+##   #
+##   below 140mV: 1% (17 polls)
+##   #
+##   below 150mV: 0% (2 polls)
+##   #
+##   below 160mV: 0% (2 polls)
+##   #
+##   below 170mV: 0% (5 polls)
+##   #
+##   below 180mV: 0% (1 polls)
+##   #
+##   below 210mV: 0% (1 polls)
+##   #
+##   below 240mV: 0% (1 polls)
+##   #
+##   below 250mV: 0% (2 polls)
+##   #
+##   below 260mV: 0% (1 polls)
+##   #
+##   below 270mV: 0% (1 polls)
+##   #
+##   below 290mV: 0% (3 polls)
+##   #
+##   below 300mV: 0% (2 polls)
+##   #
+##   below 320mV: 0% (1 polls)
+##   #
+##
+##   ,---
+##   | Raw Poll Data
+##   '---
+##   You can find the Raw measurement data at the end of this report.
+##   If the poll is higher than 60mV, the most active process is logged.
+##
+##   This file can be plotted as graphic with gnuplot.
+##
+##   EXAMPLE:
+##   gnuplot> set xdata time
+##   gnuplot> set timefmt "%H:%M:%S"
+##   gnuplot> plot "powerstats-report_2016-11-29-19h37m40s_idle" using 1:2
+##
+##############################
+11:40:01 94969 /usr/bin/harbour-sailorgram -daemon
+11:40:03 37344
+11:40:05 34339
+11:40:07 33050
+11:40:09 33695
+11:40:11 39811
+11:40:13 29402
+11:40:15 31227
+11:40:17 51508
+11:40:19 33695
+11:40:21 32407
+11:40:23 31870
+11:40:25 85848 /usr/bin/harbour-sailorgram -daemon
+11:40:28 28114
+11:40:30 31870
+11:40:32 31227
+11:40:34 31227
+11:40:36 32407
+11:40:38 34339
+11:40:40 108490 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-mediaplayer -prestart
+11:40:43 27578
+11:40:45 27578
+11:40:47 28758
+11:40:49 37987
+11:40:51 33695
+11:40:53 30583
+11:40:55 39167
+11:40:57 31870
+11:40:59 26934
+11:41:02 31870
+11:41:04 30583
+11:41:06 36162
+11:41:08 32407
+11:41:10 31227
+11:41:12 72326 /usr/bin/harbour-sailorgram -daemon
+11:41:14 28114
+11:41:16 30583
+11:41:18 30583
+11:41:20 127484 /usr/bin/harbour-sailorgram -daemon
+11:41:23 31870
+11:41:25 25753
+11:41:27 34339
+11:41:29 37344
+11:41:31 29402
+11:41:33 31227
+11:41:35 30046
+11:41:37 34875
+11:41:39 33695
+11:41:42 34339
+11:41:44 31870
+11:41:46 47752
+11:41:48 33695
+11:41:50 32407
+11:41:52 36699
+11:41:54 31227
+11:41:56 31227
+11:41:58 38631
+11:42:00 30583
+11:42:02 30046
+11:42:04 70503 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-mediaplayer -prestart
+11:42:07 30583
+11:42:09 30046
+11:42:11 36162
+11:42:13 31227
+11:42:15 82092 /usr/bin/harbour-sailorgram -daemon
+11:42:17 31227
+11:42:20 33050
+11:42:22 30583
+11:42:24 31870
+11:42:26 129416 /usr/bin/harbour-sailorgram -daemon
+11:42:28 85204 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-mediaplayer -prestart
+11:42:31 38631
+11:42:33 27578
+11:42:35 42923
+11:42:37 27578
+11:42:39 30583
+11:42:41 94432 /usr/bin/harbour-sailorgram -daemon
+11:42:43 30583
+11:42:45 87028 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-mediaplayer -prestart
+11:42:48 33050
+11:42:50 86384 /usr/bin/harbour-sailorgram -daemon
+11:42:52 30583
+11:42:54 30046
+11:42:56 310986 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-mediaplayer -prestart
+11:42:59 31870
+11:43:01 36162
+11:43:03 32407
+11:43:05 29402
+11:43:07 29402
+11:43:09 30583
+11:43:11 40991
+11:43:13 46572
+11:43:15 110314 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-mediaplayer -prestart
+11:43:18 26934
+11:43:20 37987
+11:43:22 34875
+11:43:24 27578
+11:43:26 31227
+11:43:28 111603 /usr/bin/harbour-sailorgram -daemon
+11:43:30 134889 /usr/bin/harbour-sailorgram -daemon
+11:43:33 31870
+11:43:35 40455
+11:43:37 34875
+11:43:39 31227
+11:43:41 33695
+11:43:43 34875
+11:43:45 94432 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-mediaplayer -prestart
+11:43:48 31227
+11:43:50 33050
+11:43:52 31870
+11:43:54 42923
+11:43:56 28114
+11:43:58 29402
+11:44:00 107954 /usr/bin/harbour-sailorgram -daemon
+11:44:03 31870
+11:44:05 31227
+11:44:07 30583
+11:44:09 31870
+11:44:11 31870
+11:44:13 83379 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-mediaplayer -prestart
+11:44:16 49684
+11:44:18 31227
+11:44:20 37344
+11:44:22 33050
+11:44:24 33695
+11:44:26 28114
+11:44:28 36162
+11:44:30 31227
+11:44:32 79731 /usr/bin/harbour-sailorgram -daemon
+11:44:34 83379 /usr/bin/harbour-sailorgram -daemon
+11:44:37 28114
+11:44:39 28114
+11:44:41 41636
+11:44:43 29402
+11:44:45 82736 /usr/bin/harbour-sailorgram -daemon
+11:44:48 37344
+11:44:50 39167
+11:44:52 40455
+11:44:54 33695
+11:44:56 44103
+11:44:58 29402
+11:45:00 32407
+11:45:02 108490 /usr/bin/harbour-sailorgram -daemon
+11:45:04 31870
+11:45:07 33695
+11:45:09 33050
+11:45:11 41636
+11:45:13 36699
+11:45:15 50864
+11:45:17 56338
+11:45:19 46572
+11:45:21 37987
+11:45:23 32407
+11:45:25 35519
+11:45:27 32407
+11:45:29 33050
+11:45:31 37344
+11:45:33 112246 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-mediaplayer -prestart
+11:45:36 34875
+11:45:38 88853 /usr/bin/harbour-sailorgram -daemon
+11:45:40 115895 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-mediaplayer -prestart
+11:45:43 113426 /usr/bin/harbour-sailorgram -daemon
+11:45:45 90140 /usr/lib/tumbler-1/tumblerd /usr/bin/harbour-sailorgram -daemon
+11:45:48 75439 /usr/bin/harbour-sailorgram -daemon
+11:45:50 99369 /usr/bin/harbour-sailorgram -daemon
+11:45:52 42280
+11:45:54 125661 /usr/bin/harbour-sailorgram -daemon
+11:45:57 34875
+11:45:59 91964 /usr/bin/harbour-sailorgram -daemon
+11:46:01 36699
+11:46:03 39167
+11:46:05 115251 /usr/bin/harbour-sailorgram -daemon
+11:46:08 34875
+11:46:10 35519
+11:46:12 36162
+11:46:14 34875
+11:46:16 31870
+11:46:18 31870
+11:46:20 112783 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-mediaplayer -prestart
+11:46:23 33050
+11:46:25 33695
+11:46:27 34339
+11:46:29 30046
+11:46:31 38631
+11:46:33 33695
+11:46:35 34339
+11:46:37 42923
+11:46:39 31870
+11:46:41 54513
+11:46:44 37987
+11:46:46 36699
+11:46:48 31227
+11:46:50 33695
+11:46:52 45928
+11:46:54 28114
+11:46:56 69858 /usr/bin/harbour-sailorgram -daemon
+11:46:58 87028 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-mediaplayer -prestart
+11:47:01 44103
+11:47:03 30046
+11:47:05 82092 /usr/bin/harbour-sailorgram -daemon
+11:47:07 97437 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-mediaplayer -prestart
+11:47:10 30046
+11:47:12 67391 /usr/bin/harbour-sailorgram -daemon
+11:47:14 30046
+11:47:16 34339
+11:47:18 54513
+11:47:20 108490 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-mediaplayer -prestart
+11:47:23 169873 /usr/bin/harbour-sailorgram -daemon
+11:47:25 78444 /usr/bin/harbour-sailorgram -daemon
+11:47:27 35519
+11:47:29 46572
+11:47:31 41636
+11:47:33 39811
+11:47:36 106666 /usr/bin/harbour-sailorgram -daemon
+11:47:38 33050
+11:47:40 37987
+11:47:42 30583
+11:47:44 34875
+11:47:46 92609 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-mediaplayer -prestart
+11:47:49 33050
+11:47:51 45928
+11:47:53 36699
+11:47:55 31227
+11:47:57 110314 /usr/bin/harbour-sailorgram -daemon
+11:47:59 36162
+11:48:01 38631
+11:48:03 82736 /usr/bin/harbour-sailorgram -daemon
+11:48:06 36162
+11:48:08 30046
+11:48:10 94969 /usr/bin/harbour-sailorgram -daemon
+11:48:13 34875
+11:48:15 92609 /usr/bin/harbour-sailorgram -daemon
+11:48:17 33050
+11:48:19 50864
+11:48:21 44103
+11:48:23 68678 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-mediaplayer -prestart
+11:48:26 33695
+11:48:28 35519
+11:48:30 36162
+11:48:32 31870
+11:48:34 37344
+11:48:36 32407
+11:48:38 36699
+11:48:40 30046
+11:48:42 111603 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-mediaplayer -prestart
+11:48:45 27578
+11:48:47 33695
+11:48:49 28758
+11:48:51 75975 /usr/bin/harbour-sailorgram -daemon
+11:48:53 131240 /usr/bin/harbour-sailorgram -daemon
+11:48:55 91964 /usr/bin/harbour-sailorgram -daemon
+11:48:58 33695
+11:49:00 34875
+11:49:02 31227
+11:49:04 31870
+11:49:06 31227
+11:49:08 35519
+11:49:10 112246 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+11:49:13 33050
+11:49:15 31870
+11:49:17 32407
+11:49:19 46572
+11:49:21 38631
+11:49:23 32407
+11:49:25 49684
+11:49:27 34875
+11:49:29 84023 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-mediaplayer -prestart
+11:49:32 138001 /usr/bin/harbour-sailorgram -daemon
+11:49:34 42280
+11:49:36 38631
+11:49:38 34339
+11:49:40 32407
+11:49:42 31227
+11:49:44 32407
+11:49:46 30046
+11:49:48 30046
+11:49:50 110851 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-mediaplayer -prestart
+11:49:53 30583
+11:49:55 30583
+11:49:57 29938
+11:49:59 78336 /usr/bin/harbour-sailorgram -daemon
+11:50:01 27471
+11:50:04 28114
+11:50:06 29402
+11:50:08 28758
+11:50:10 28114
+11:50:12 45285
+11:50:14 77799 /usr/bin/harbour-sailorgram -daemon
+11:50:16 27471
+11:50:18 30583
+11:50:21 116968 /usr/bin/harbour-sailorgram -daemon
+11:50:23 56874
+11:50:25 31763
+11:50:27 31227
+11:50:29 36055
+11:50:31 33050
+11:50:33 31227
+11:50:35 28114
+11:50:37 33050
+11:50:39 40348
+11:50:42 29402
+11:50:44 28758
+11:50:46 45285
+11:50:48 29402
+11:50:50 31763
+11:50:52 33050
+11:50:54 32407
+11:50:56 31763
+11:50:58 29402
+11:51:00 31227
+11:51:02 29402
+11:51:04 29938
+11:51:06 29938
+11:51:08 33050
+11:51:10 117612 /usr/bin/harbour-sailorgram -daemon
+11:51:13 29938
+11:51:15 25109
+11:51:17 29938
+11:51:19 29938
+11:51:21 29402
+11:51:23 42816
+11:51:25 25109
+11:51:27 29402
+11:51:29 67282 /usr/bin/harbour-sailorgram -daemon
+11:51:32 37880
+11:51:34 103446 /usr/bin/harbour-sailorgram -daemon
+11:51:36 30583
+11:51:38 69214 /usr/bin/harbour-sailorgram -daemon
+11:51:41 41636
+11:51:43 63098 /usr/bin/harbour-sailorgram -daemon
+11:51:45 90033 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+11:51:48 29938
+11:51:50 29938
+11:51:52 126734 /usr/bin/harbour-sailorgram -daemon
+11:51:54 29402
+11:51:56 67927 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+11:51:59 36699
+11:52:01 39167
+11:52:03 28114
+11:52:05 28758
+11:52:07 28758
+11:52:09 85741 /usr/bin/harbour-sailorgram -daemon
+11:52:11 26934
+11:52:14 26934
+11:52:16 80804 /usr/bin/harbour-sailorgram -daemon
+11:52:18 29938
+11:52:20 42816
+11:52:22 44103
+11:52:24 27471
+11:52:26 27471
+11:52:28 29938
+11:52:30 137142 /usr/bin/harbour-sailorgram -daemon
+11:52:33 25646
+11:52:35 29402
+11:52:37 31227
+11:52:39 42816
+11:52:41 34232
+11:52:43 25646
+11:52:45 77799 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+11:52:48 42816
+11:52:50 44640
+11:52:52 30583
+11:52:54 80160 /usr/bin/harbour-sailorgram -daemon
+11:52:56 30583
+11:52:58 140899 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+11:53:01 285446 /usr/lib/buteo-plugins-qt5//oopp/twitter-posts-client twitter-posts twitter.Posts-7
+11:53:03 76512 /usr/bin/harbour-sailorgram -daemon
+11:53:05 130382 /usr/lib/buteo-plugins-qt5//oopp/twitter-posts-client twitter-posts twitter.Posts-7 /usr/bin/harbour-sailorgram -daemon
+11:53:07 282334 /usr/lib/buteo-plugins-qt5//oopp/twitter-notifications-client twitter-notifications twitter.Notifications-7 /usr/lib/buteo-plugins-qt5//oopp/twitter-posts-client twitter-posts twitter.Posts-7
+11:53:10 77155 /usr/bin/harbour-sailorgram -daemon
+11:53:12 34875
+11:53:14 36055
+11:53:16 29402
+11:53:18 29402
+11:53:20 29938
+11:53:22 44640
+11:53:24 30583
+11:53:26 27471
+11:53:28 31227
+11:53:30 124909 /usr/bin/harbour-sailorgram -daemon
+11:53:33 44640
+11:53:35 26291
+11:53:37 29938
+11:53:39 30583
+11:53:41 34232
+11:53:43 110851 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+11:53:46 98618 /usr/bin/harbour-sailorgram -daemon
+11:53:48 81984 /usr/bin/harbour-sailorgram -daemon
+11:53:50 118792 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+11:53:53 33587
+11:53:55 29402
+11:53:57 83916 /usr/bin/harbour-sailorgram -daemon
+11:53:59 32407
+11:54:01 33587
+11:54:04 38524
+11:54:06 128021 /usr/bin/harbour-sailorgram -daemon
+11:54:08 34875
+11:54:10 71039 /usr/bin/harbour-sailorgram -daemon
+11:54:13 31227
+11:54:15 31763
+11:54:17 31227
+11:54:19 33587
+11:54:21 39167
+11:54:23 28758
+11:54:25 28114
+11:54:27 29402
+11:54:29 80804 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+11:54:32 55049
+11:54:34 63098 /usr/bin/harbour-sailorgram -daemon
+11:54:36 33050
+11:54:38 29402
+11:54:40 105915 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+11:54:43 29938
+11:54:45 33050
+11:54:47 34232
+11:54:49 110959 /usr/bin/harbour-sailorgram -daemon
+11:54:52 41636
+11:54:54 122656 /usr/bin/harbour-sailorgram -daemon
+11:54:56 31870
+11:54:58 64386 /usr/bin/harbour-sailorgram -daemon
+11:55:00 130060 /usr/bin/harbour-sailorgram -daemon
+11:55:03 35519
+11:55:05 35519
+11:55:07 34875
+11:55:09 36162
+11:55:11 37344
+11:55:13 40455
+11:55:15 49684
+11:55:17 42280
+11:55:19 35519
+11:55:21 32514
+11:55:23 36162
+11:55:26 90784 /usr/bin/harbour-sailorgram -daemon
+11:55:28 35519
+11:55:30 33695
+11:55:32 34339
+11:55:34 35519
+11:55:36 32514
+11:55:38 32514
+11:55:40 120831 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+11:55:43 49040
+11:55:45 34875
+11:55:47 30046
+11:55:49 37344
+11:55:51 43460
+11:55:53 40455
+11:55:55 36162
+11:55:57 34875
+11:55:59 34339
+11:56:01 42923
+11:56:04 33695
+11:56:06 41099
+11:56:08 34339
+11:56:10 127591 /usr/bin/harbour-sailorgram -daemon
+11:56:12 33695
+11:56:14 122012 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+11:56:17 36807
+11:56:19 84668 /usr/bin/harbour-sailorgram -daemon
+11:56:21 41636
+11:56:23 33695
+11:56:25 33695
+11:56:27 34875
+11:56:29 34875
+11:56:31 42923
+11:56:33 93252 /usr/bin/harbour-sailorgram -daemon
+11:56:36 35519
+11:56:38 115251 /usr/bin/harbour-sailorgram -daemon
+11:56:40 128772 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+11:56:43 33695
+11:56:45 31227
+11:56:47 33695
+11:56:49 101837 /usr/bin/harbour-sailorgram -daemon
+11:56:51 30583
+11:56:53 33695
+11:56:56 91964 /usr/bin/harbour-sailorgram -daemon
+11:56:58 36162
+11:57:00 32514
+11:57:02 34339
+11:57:04 36162
+11:57:06 37344
+11:57:08 30046
+11:57:10 130596 /usr/bin/harbour-sailorgram -daemon
+11:57:13 36162
+11:57:15 37987
+11:57:17 34339
+11:57:19 32514
+11:57:21 38631
+11:57:23 35519
+11:57:25 95076 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+11:57:28 33050
+11:57:30 34339
+11:57:32 39811
+11:57:34 38631
+11:57:36 32514
+11:57:38 68678 /usr/bin/harbour-sailorgram -daemon
+11:57:40 128772 /usr/bin/harbour-sailorgram -daemon
+11:57:43 85848 /usr/bin/harbour-sailorgram -daemon
+11:57:45 31870
+11:57:47 36807
+11:57:49 37344
+11:57:51 107310 /usr/bin/harbour-sailorgram -daemon
+11:57:54 34339
+11:57:56 31870
+11:57:58 30583
+11:58:00 34339
+11:58:02 31227
+11:58:04 34875
+11:58:06 33695
+11:58:08 36807
+11:58:10 130060 /usr/bin/harbour-sailorgram -daemon
+11:58:13 34339
+11:58:15 31870
+11:58:17 31227
+11:58:19 32514
+11:58:21 36162
+11:58:23 36162
+11:58:25 46572
+11:58:27 35519
+11:58:29 35519
+11:58:32 104842 /usr/bin/harbour-sailorgram -daemon
+11:58:34 33695
+11:58:36 36162
+11:58:38 40455
+11:58:40 42923
+11:58:42 32514
+11:58:44 174808 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+11:58:47 36162
+11:58:49 37344
+11:58:51 95613 /usr/bin/harbour-sailorgram -daemon
+11:58:53 34875
+11:58:55 34875
+11:58:57 47215
+11:58:59 32514
+11:59:01 55156
+11:59:03 35519
+11:59:05 93789 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+11:59:08 33695
+11:59:10 31870
+11:59:12 47215
+11:59:14 36807
+11:59:16 33695
+11:59:18 37987
+11:59:20 53976
+11:59:22 37344
+11:59:24 34875
+11:59:26 32514
+11:59:29 34339
+11:59:31 90140 /usr/bin/harbour-sailorgram -daemon
+11:59:33 30583
+11:59:35 36162
+11:59:37 34875
+11:59:39 36162
+11:59:41 42923
+11:59:43 47215
+11:59:45 34875
+11:59:47 95613 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+11:59:50 34339
+11:59:52 28651
+11:59:54 30475
+11:59:56 34768
+11:59:58 27471
+12:00:00 28651
+12:00:02 31763
+12:00:04 27471
+12:00:06 32943
+12:00:08 29295
+12:00:10 119221 /usr/bin/harbour-sailorgram -daemon
+12:00:13 43996
+12:00:15 28651
+12:00:17 28651
+12:00:19 28114
+12:00:21 87994 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:00:23 27471
+12:00:26 87350 /usr/bin/harbour-sailorgram -daemon
+12:00:28 30475
+12:00:30 28651
+12:00:32 78873 /usr/bin/harbour-sailorgram -daemon
+12:00:34 27471
+12:00:37 29295
+12:00:39 30475
+12:00:41 89174 /usr/bin/harbour-sailorgram -daemon
+12:00:43 27471
+12:00:45 28114
+12:00:47 30475
+12:00:49 23822
+12:00:51 34768
+12:00:53 34768
+12:00:55 29938
+12:00:57 40348
+12:00:59 42172
+12:01:01 24359
+12:01:04 29295
+12:01:06 26291
+12:01:08 80053 /usr/bin/harbour-sailorgram -daemon
+12:01:10 26827
+12:01:12 28651
+12:01:14 28651
+12:01:16 75116 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:01:19 78873 /usr/bin/harbour-sailorgram -daemon
+12:01:21 62347 /usr/bin/harbour-sailorgram -daemon
+12:01:23 35412
+12:01:25 84882 /usr/bin/harbour-sailorgram -daemon
+12:01:28 30475
+12:01:30 27471
+12:01:32 31119
+12:01:34 30475
+12:01:36 47001
+12:01:38 25646
+12:01:40 110637 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:01:43 25646
+12:01:45 25002
+12:01:47 27471
+12:01:49 28651
+12:01:51 33587
+12:01:53 27471
+12:01:55 30475
+12:01:57 33587
+12:01:59 29295
+12:02:01 26827
+12:02:04 26827
+12:02:06 31763
+12:02:08 27471
+12:02:10 23822
+12:02:12 30475
+12:02:14 29295
+12:02:16 28114
+12:02:18 33587
+12:02:20 29938
+12:02:22 31763
+12:02:24 37880
+12:02:26 26291
+12:02:28 27471
+12:02:30 117290 /usr/bin/harbour-sailorgram -daemon
+12:02:33 30475
+12:02:35 25646
+12:02:37 28651
+12:02:39 29295
+12:02:41 29938
+12:02:43 25002
+12:02:45 62347 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:02:48 27471
+12:02:50 110637 /usr/bin/harbour-sailorgram -daemon
+12:02:52 28651
+12:02:54 111817 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:02:57 79410 /usr/bin/harbour-sailorgram -daemon
+12:02:59 29295
+12:03:01 26291
+12:03:03 26827
+12:03:05 33587
+12:03:07 30475
+12:03:09 28114
+12:03:11 27471
+12:03:14 29295
+12:03:16 30475
+12:03:18 31763
+12:03:20 31763
+12:03:22 42172
+12:03:24 24359
+12:03:26 31119
+12:03:28 28114
+12:03:30 63527 /usr/bin/harbour-sailorgram -daemon
+12:03:33 29295
+12:03:35 36592
+12:03:37 26827
+12:03:39 30475
+12:03:41 26827
+12:03:43 29938
+12:03:45 25646
+12:03:47 34768
+12:03:49 90463 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:03:52 28114
+12:03:54 68464 /usr/bin/harbour-sailorgram -daemon
+12:03:56 25002
+12:03:58 58054
+12:04:00 109993 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:04:03 25002
+12:04:05 26827
+12:04:07 26827
+12:04:09 39060
+12:04:11 43353
+12:04:13 34232
+12:04:15 87994 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:04:18 29295
+12:04:20 29295
+12:04:22 34232
+12:04:24 29295
+12:04:26 32943
+12:04:28 32300
+12:04:30 28651
+12:04:32 35412
+12:04:34 25002
+12:04:36 27471
+12:04:38 82521 /usr/bin/harbour-sailorgram -daemon
+12:04:41 32300
+12:04:43 27471
+12:04:45 92286 /usr/bin/harbour-sailorgram -daemon
+12:04:47 29938
+12:04:49 28114
+12:04:51 27471
+12:04:54 33587
+12:04:56 34875
+12:04:58 30583
+12:05:00 29938
+12:05:02 33050
+12:05:04 37880
+12:05:06 42172
+12:05:08 75331 /usr/bin/harbour-sailorgram -daemon
+12:05:10 119436 /usr/bin/harbour-sailorgram -daemon
+12:05:13 30583
+12:05:15 28758
+12:05:17 31763
+12:05:19 34875
+12:05:21 37880
+12:05:23 28758
+12:05:25 45285
+12:05:27 30583
+12:05:29 29402
+12:05:32 28758
+12:05:34 107739 /usr/bin/harbour-sailorgram -daemon
+12:05:36 30583
+12:05:38 66746 /usr/bin/harbour-sailorgram -daemon
+12:05:40 138430 /usr/bin/harbour-sailorgram -daemon
+12:05:43 39811
+12:05:45 32407
+12:05:47 32407
+12:05:49 26934
+12:05:51 24466
+12:05:53 31763
+12:05:55 166545 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:05:58 29938
+12:06:00 28114
+12:06:02 34875
+12:06:04 42816
+12:06:06 30583
+12:06:08 27471
+12:06:10 31227
+12:06:12 31763
+12:06:14 32407
+12:06:16 29402
+12:06:18 82629 /usr/bin/harbour-sailorgram -daemon
+12:06:21 39811
+12:06:23 69214 /usr/bin/harbour-sailorgram -daemon
+12:06:25 88745 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:06:28 30583
+12:06:30 31227
+12:06:32 31763
+12:06:34 33050
+12:06:36 31763
+12:06:38 82629 /usr/bin/harbour-sailorgram -daemon
+12:06:41 121904 /usr/bin/harbour-sailorgram -daemon
+12:06:43 29938
+12:06:45 28114
+12:06:47 29402
+12:06:49 31763
+12:06:51 38524
+12:06:53 31227
+12:06:55 29402
+12:06:57 30583
+12:06:59 32407
+12:07:01 31227
+12:07:04 26934
+12:07:06 29402
+12:07:08 30583
+12:07:10 31763
+12:07:12 41636
+12:07:14 33050
+12:07:16 64922 /usr/bin/harbour-sailorgram -daemon
+12:07:18 31227
+12:07:20 141435 /usr/bin/harbour-sailorgram -daemon
+12:07:23 30583
+12:07:25 28114
+12:07:27 34232
+12:07:29 37344
+12:07:31 34875
+12:07:33 28114
+12:07:35 23179
+12:07:37 31763
+12:07:39 28114
+12:07:42 31227
+12:07:44 33050
+12:07:46 36055
+12:07:48 31227
+12:07:50 33587
+12:07:52 35519
+12:07:54 28114
+12:07:56 31227
+12:07:58 29938
+12:08:00 249283 /usr/lib/buteo-plugins-qt5//oopp/syncemail-client syncemail syncemail-4 /usr/lib/buteo-plugins-qt5//oopp/facebook-notifications-client facebook-notifications facebook.Notifications-3
+12:08:02 154312 /usr/lib/buteo-plugins-qt5//oopp/twitter-notifications-client twitter-notifications twitter.Notifications-7 /usr/lib/buteo-plugins-qt5//oopp/facebook-notifications-client facebook-notifications facebook.Notifications-3
+12:08:05 289739 /usr/lib/buteo-plugins-qt5//oopp/twitter-posts-client twitter-posts twitter.Posts-7
+12:08:07 45928
+12:08:09 44640
+12:08:11 261516 /usr/lib/buteo-plugins-qt5//oopp/twitter-notifications-client twitter-notifications twitter.Notifications-7 /usr/lib/buteo-plugins-qt5//oopp/twitter-posts-client twitter-posts twitter.Posts-7
+12:08:13 41636
+12:08:15 88745 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:08:18 28114
+12:08:20 38524
+12:08:22 27471
+12:08:24 29938
+12:08:26 30583
+12:08:28 29938
+12:08:30 31763
+12:08:32 29402
+12:08:34 34232
+12:08:36 31763
+12:08:38 42816
+12:08:41 116324 /usr/bin/harbour-sailorgram -daemon
+12:08:43 39811
+12:08:45 44640
+12:08:47 85096 /usr/bin/harbour-sailorgram -daemon
+12:08:49 32407
+12:08:51 39811
+12:08:54 37344
+12:08:56 31763
+12:08:58 31763
+12:09:00 27471
+12:09:02 29402
+12:09:04 29938
+12:09:06 26934
+12:09:08 37344
+12:09:10 29938
+12:09:12 30583
+12:09:14 33050
+12:09:16 33050
+12:09:18 29402
+12:09:21 127377 /usr/bin/harbour-sailorgram -daemon
+12:09:23 28114
+12:09:25 40348
+12:09:27 28114
+12:09:29 27471
+12:09:31 36055
+12:09:33 30583
+12:09:35 29938
+12:09:37 30583
+12:09:39 30583
+12:09:41 33587
+12:09:44 34875
+12:09:46 80804 /usr/bin/harbour-sailorgram -daemon
+12:09:48 34232
+12:09:50 31763
+12:09:52 124265 /usr/bin/harbour-sailorgram -daemon
+12:09:55 30583
+12:09:57 69214 /usr/bin/harbour-sailorgram -daemon
+12:09:59 31763
+12:10:01 36699
+12:10:03 31763
+12:10:05 34875
+12:10:07 33587
+12:10:09 33587
+12:10:11 28758
+12:10:14 31227
+12:10:16 37344
+12:10:18 28758
+12:10:20 34875
+12:10:22 85741 /usr/bin/harbour-sailorgram -daemon
+12:10:24 32407
+12:10:26 31227
+12:10:28 30583
+12:10:30 126197 /usr/lib/tumbler-1/tumblerd
+12:10:33 29402
+12:10:35 208826 /usr/bin/harbour-sailorgram -daemon
+12:10:37 37344
+12:10:39 31763
+12:10:41 91857 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:10:43 75331 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:10:46 50220
+12:10:48 34875
+12:10:50 52044
+12:10:52 41636
+12:10:54 31763
+12:10:56 30583
+12:10:58 33050
+12:11:00 39167
+12:11:02 33050
+12:11:04 29402
+12:11:06 31227
+12:11:08 30583
+12:11:10 119436 /usr/bin/harbour-sailorgram -daemon
+12:11:13 33050
+12:11:15 31227
+12:11:17 30583
+12:11:19 31227
+12:11:21 32407
+12:11:23 27471
+12:11:25 43460
+12:11:27 40348
+12:11:29 69751 /usr/bin/harbour-sailorgram -daemon
+12:11:32 26934
+12:11:34 69751 /usr/bin/harbour-sailorgram -daemon
+12:11:36 32407
+12:11:38 32407
+12:11:40 124265 /usr/bin/harbour-sailorgram -daemon
+12:11:43 36699
+12:11:45 33050
+12:11:47 37344
+12:11:49 31227
+12:11:51 39811
+12:11:53 31763
+12:11:55 29402
+12:11:57 43460
+12:11:59 30583
+12:12:01 34875
+12:12:03 85096 /usr/bin/harbour-sailorgram -daemon
+12:12:06 30583
+12:12:08 30583
+12:12:10 31227
+12:12:12 31227
+12:12:14 33587
+12:12:16 33050
+12:12:18 33050
+12:12:20 119436 /usr/bin/harbour-sailorgram -daemon
+12:12:23 33587
+12:12:25 33587
+12:12:27 28114
+12:12:29 29402
+12:12:31 36055
+12:12:33 28758
+12:12:35 30583
+12:12:37 39811
+12:12:39 29938
+12:12:41 39811
+12:12:44 35519
+12:12:46 56874
+12:12:48 45928
+12:12:50 33050
+12:12:52 41636
+12:12:54 28114
+12:12:56 32407
+12:12:58 33050
+12:13:00 30583
+12:13:02 29402
+12:13:04 36699
+12:13:06 31763
+12:13:08 39811
+12:13:10 119973 /usr/bin/harbour-sailorgram -daemon
+12:13:13 33050
+12:13:15 31763
+12:13:17 30583
+12:13:19 33050
+12:13:21 40991
+12:13:23 31227
+12:13:25 96686 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:13:28 29938
+12:13:30 30583
+12:13:32 42172
+12:13:34 31227
+12:13:36 31227
+12:13:38 32407
+12:13:40 31763
+12:13:42 35519
+12:13:44 31763
+12:13:46 31227
+12:13:48 86921 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:13:51 41636
+12:13:53 52582
+12:13:55 32407
+12:13:57 34875
+12:13:59 34875
+12:14:01 36055
+12:14:03 29402
+12:14:05 83916 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:14:08 33050
+12:14:10 30583
+12:14:12 40348
+12:14:14 32407
+12:14:16 31227
+12:14:18 32407
+12:14:20 36699
+12:14:22 30583
+12:14:24 33587
+12:14:26 31227
+12:14:28 35519
+12:14:30 103446 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:14:33 34875
+12:14:35 50757
+12:14:37 31763
+12:14:39 31227
+12:14:41 45285
+12:14:43 28114
+12:14:45 28114
+12:14:47 52044
+12:14:49 48289
+12:14:51 96149 /usr/bin/harbour-sailorgram -daemon
+12:14:54 83272 /usr/bin/harbour-sailorgram -daemon
+12:14:56 135425 /usr/bin/harbour-sailorgram -daemon
+12:14:59 28114
+12:15:01 45285
+12:15:03 36699
+12:15:05 29402
+12:15:07 27471
+12:15:09 32407
+12:15:11 58161
+12:15:13 83272 /usr/bin/harbour-sailorgram -daemon
+12:15:15 122548 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:15:18 37987
+12:15:20 30583
+12:15:22 31763
+12:15:24 33695
+12:15:26 30583
+12:15:28 34875
+12:15:30 29938
+12:15:32 31227
+12:15:34 89389 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:15:37 28758
+12:15:39 99261 /usr/bin/harbour-sailorgram -daemon
+12:15:41 100442 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:15:44 43460
+12:15:46 40348
+12:15:48 44640
+12:15:50 31227
+12:15:52 40991
+12:15:54 27471
+12:15:56 28758
+12:15:58 31763
+12:16:00 33050
+12:16:02 29402
+12:16:04 33050
+12:16:06 43460
+12:16:08 36699
+12:16:10 119436 /usr/bin/harbour-sailorgram -daemon
+12:16:13 34875
+12:16:15 28758
+12:16:17 36055
+12:16:19 44640
+12:16:21 35519
+12:16:23 29402
+12:16:25 31763
+12:16:27 40991
+12:16:29 30583
+12:16:31 31763
+12:16:34 29402
+12:16:36 34232
+12:16:38 88853 /usr/bin/harbour-sailorgram -daemon
+12:16:40 29938
+12:16:42 45285
+12:16:44 31763
+12:16:46 31763
+12:16:48 31227
+12:16:51 116968 /usr/bin/harbour-sailorgram -daemon
+12:16:53 29938
+12:16:55 31227
+12:16:57 29938
+12:16:59 29402
+12:17:01 92501 /usr/bin/harbour-sailorgram -daemon
+12:17:03 36055
+12:17:05 87565 /usr/bin/harbour-sailorgram -daemon
+12:17:08 31227
+12:17:10 33050
+12:17:12 32407
+12:17:14 29938
+12:17:16 85096 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:17:19 32407
+12:17:21 39167
+12:17:23 33050
+12:17:25 28114
+12:17:27 82092 /usr/bin/harbour-sailorgram -daemon
+12:17:29 83272 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:17:32 66102 /usr/bin/harbour-sailorgram -daemon
+12:17:34 37987
+12:17:36 43460
+12:17:38 27471
+12:17:40 120080 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:17:43 35519
+12:17:45 39811
+12:17:47 33050
+12:17:49 32407
+12:17:51 58805
+12:17:53 29938
+12:17:55 33695
+12:17:57 44640
+12:17:59 84560 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:18:02 31227
+12:18:04 29402
+12:18:06 29938
+12:18:08 37987
+12:18:10 33695
+12:18:12 29402
+12:18:14 29402
+12:18:16 109671 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:18:19 28114
+12:18:21 42816
+12:18:23 34232
+12:18:25 83272 /usr/bin/harbour-sailorgram -daemon
+12:18:27 44640
+12:18:29 30583
+12:18:31 28114
+12:18:34 30583
+12:18:36 41636
+12:18:38 30583
+12:18:40 25109
+12:18:42 42280
+12:18:44 32407
+12:18:46 62454 /usr/bin/harbour-sailorgram -daemon
+12:18:48 29402
+12:18:50 151307 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:18:53 30583
+12:18:55 33050
+12:18:57 31763
+12:18:59 34875
+12:19:01 67927 /usr/bin/harbour-sailorgram -daemon
+12:19:03 32407
+12:19:05 86921 /usr/bin/harbour-sailorgram -daemon
+12:19:08 36055
+12:19:10 31227
+12:19:12 44103
+12:19:14 132313 /usr/bin/harbour-sailorgram -daemon
+12:19:16 83272 /usr/bin/harbour-sailorgram -daemon
+12:19:19 33050
+12:19:21 91213 /usr/bin/harbour-sailorgram -daemon
+12:19:23 83272 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:19:26 113963 /usr/bin/harbour-sailorgram -daemon
+12:19:28 31227
+12:19:30 59986
+12:19:32 31227
+12:19:34 30583
+12:19:36 31227
+12:19:38 29938
+12:19:40 121904 /usr/bin/harbour-sailorgram -daemon
+12:19:43 53869
+12:19:45 32407
+12:19:47 29938
+12:19:49 32407
+12:19:51 35519
+12:19:53 28758
+12:19:55 29402
+12:19:57 96794 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:20:00 29938
+12:20:02 40348
+12:20:04 33050
+12:20:06 36699
+12:20:08 94325 /usr/bin/harbour-sailorgram -daemon
+12:20:10 131670 /usr/bin/harbour-sailorgram -daemon
+12:20:13 29402
+12:20:15 57518
+12:20:17 31763
+12:20:19 30583
+12:20:21 36699
+12:20:23 35519
+12:20:25 31227
+12:20:27 42816
+12:20:29 45285
+12:20:31 45285
+12:20:34 31763
+12:20:36 34232
+12:20:38 30583
+12:20:40 27471
+12:20:42 38524
+12:20:44 55693
+12:20:46 34232
+12:20:48 29938
+12:20:50 61273 /usr/bin/harbour-sailorgram -daemon
+12:20:53 34875
+12:20:55 29938
+12:20:57 32407
+12:20:59 31227
+12:21:01 36055
+12:21:03 30583
+12:21:05 31227
+12:21:07 49577
+12:21:09 88853 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:21:12 39811
+12:21:14 94969 /usr/bin/harbour-sailorgram -daemon
+12:21:16 29402
+12:21:18 64278 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:21:21 42280
+12:21:23 27471
+12:21:25 32407
+12:21:27 29938
+12:21:29 34875
+12:21:31 35519
+12:21:33 29938
+12:21:35 31227
+12:21:37 28114
+12:21:39 29938
+12:21:41 30583
+12:21:43 32407
+12:21:45 83916 /usr/bin/harbour-sailorgram -daemon
+12:21:48 30583
+12:21:50 31763
+12:21:52 32407
+12:21:54 75975 /usr/bin/harbour-sailorgram -daemon
+12:21:56 34232
+12:21:59 167833 /usr/bin/harbour-sailorgram -daemon
+12:22:01 37987
+12:22:03 85741 /usr/bin/harbour-sailorgram -daemon
+12:22:05 88208 /usr/bin/harbour-sailorgram -daemon
+12:22:08 28114
+12:22:10 33695
+12:22:12 26934
+12:22:14 29402
+12:22:16 29938
+12:22:18 34875
+12:22:20 105915 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:22:23 56981
+12:22:25 30583
+12:22:27 39811
+12:22:29 29402
+12:22:31 46572
+12:22:33 34232
+12:22:35 43460
+12:22:37 41636
+12:22:39 27471
+12:22:42 80267 /usr/bin/harbour-sailorgram -daemon
+12:22:44 32407
+12:22:46 29402
+12:22:48 26934
+12:22:50 31227
+12:22:52 27471
+12:22:54 121260 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:22:57 28758
+12:22:59 69858 /usr/lib/buteo-plugins-qt5//oopp/twitter-notifications-client twitter-notifications twitter.Notifications-7
+12:23:01 293495 /usr/lib/buteo-plugins-qt5//oopp/twitter-posts-client twitter-posts twitter.Posts-7
+12:23:03 73507 /usr/bin/harbour-sailorgram -daemon
+12:23:05 129845 /usr/lib/buteo-plugins-qt5//oopp/twitter-posts-client twitter-posts twitter.Posts-7
+12:23:07 244453 /usr/lib/buteo-plugins-qt5//oopp/twitter-notifications-client twitter-notifications twitter.Notifications-7 /usr/lib/buteo-plugins-qt5//oopp/twitter-posts-client twitter-posts twitter.Posts-7
+12:23:10 45928
+12:23:12 36699
+12:23:14 29938
+12:23:16 29402
+12:23:18 48397
+12:23:20 31227
+12:23:22 26291
+12:23:24 30583
+12:23:26 28114
+12:23:28 44103
+12:23:30 118255 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:23:33 41636
+12:23:35 30583
+12:23:37 35519
+12:23:39 28114
+12:23:41 93682 /usr/bin/harbour-sailorgram -daemon
+12:23:43 31763
+12:23:45 81448 /usr/bin/harbour-sailorgram -daemon
+12:23:48 28758
+12:23:50 76512 /usr/bin/harbour-sailorgram -daemon
+12:23:52 83916 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:23:55 28758
+12:23:57 31763
+12:23:59 33695
+12:24:01 45285
+12:24:03 80267 /usr/bin/harbour-sailorgram -daemon
+12:24:05 97330 /usr/bin/harbour-sailorgram -daemon
+12:24:08 62454 /usr/bin/harbour-sailorgram -daemon
+12:24:10 122548 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:24:13 83272 /usr/bin/harbour-sailorgram -daemon
+12:24:15 31763
+12:24:17 30583
+12:24:19 29938
+12:24:21 28114
+12:24:23 33695
+12:24:26 84560 /usr/bin/harbour-sailorgram -daemon
+12:24:28 29938
+12:24:30 25646
+12:24:32 27471
+12:24:34 37987
+12:24:36 29938
+12:24:38 45928
+12:24:40 116431 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:24:43 27471
+12:24:45 29938
+12:24:47 28758
+12:24:49 27471
+12:24:51 34875
+12:24:53 34875
+12:24:55 31870
+12:24:57 32407
+12:24:59 33695
+12:25:02 56981
+12:25:04 29938
+12:25:06 29402
+12:25:08 27578
+12:25:10 87028 /usr/bin/harbour-sailorgram -daemon
+12:25:12 29402
+12:25:14 30583
+12:25:16 29938
+12:25:18 29938
+12:25:20 119543 /usr/bin/harbour-sailorgram -daemon
+12:25:23 28758
+12:25:25 28758
+12:25:27 28758
+12:25:29 28758
+12:25:31 39811
+12:25:33 31870
+12:25:35 30583
+12:25:37 29938
+12:25:39 25109
+12:25:41 37987
+12:25:44 31870
+12:25:46 35519
+12:25:48 29402
+12:25:50 29402
+12:25:52 29402
+12:25:54 32407
+12:25:56 36162
+12:25:58 28758
+12:26:00 85204 /usr/bin/harbour-sailorgram -daemon
+12:26:03 79624 /usr/bin/harbour-sailorgram -daemon
+12:26:05 30583
+12:26:07 39811
+12:26:09 26291
+12:26:11 55156
+12:26:13 50220
+12:26:16 90677 /usr/bin/harbour-sailorgram -daemon
+12:26:18 31870
+12:26:20 28114
+12:26:22 50220
+12:26:24 32407
+12:26:26 29402
+12:26:28 30583
+12:26:30 121367 /usr/bin/harbour-sailorgram -daemon
+12:26:33 34875
+12:26:35 31227
+12:26:37 44103
+12:26:39 37987
+12:26:41 36699
+12:26:43 31227
+12:26:45 63098 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:26:48 33695
+12:26:50 63742 /usr/bin/harbour-sailorgram -daemon
+12:26:52 27578
+12:26:54 71683 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:26:57 34232
+12:26:59 30583
+12:27:01 93145 /usr/bin/harbour-sailorgram -daemon
+12:27:03 26291
+12:27:05 28114
+12:27:07 82736 /usr/bin/harbour-sailorgram -daemon
+12:27:10 42280
+12:27:12 33695
+12:27:14 31227
+12:27:16 30583
+12:27:18 31227
+12:27:20 30583
+12:27:22 28114
+12:27:24 33695
+12:27:26 31227
+12:27:28 34875
+12:27:30 109671 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:27:33 37344
+12:27:35 28758
+12:27:37 28114
+12:27:39 31227
+12:27:41 84560 /usr/bin/harbour-sailorgram -daemon
+12:27:43 38524
+12:27:46 83379 /usr/bin/harbour-sailorgram -daemon
+12:27:48 32407
+12:27:50 32407
+12:27:52 34875
+12:27:54 33695
+12:27:56 31227
+12:27:58 29938
+12:28:00 121367 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:28:03 28114
+12:28:05 33695
+12:28:07 29402
+12:28:09 136714 /usr/bin/harbour-sailorgram -daemon
+12:28:12 34232
+12:28:14 33695
+12:28:16 36162
+12:28:18 29938
+12:28:20 29938
+12:28:22 30583
+12:28:24 28758
+12:28:26 28114
+12:28:28 34875
+12:28:30 28114
+12:28:32 31227
+12:28:34 42280
+12:28:36 84560 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:28:39 30583
+12:28:41 40455
+12:28:43 28114
+12:28:45 31870
+12:28:47 29402
+12:28:49 45928
+12:28:51 34875
+12:28:53 110314 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:28:56 32407
+12:28:58 28758
+12:29:00 27578
+12:29:02 33050
+12:29:04 26934
+12:29:06 31870
+12:29:08 29402
+12:29:10 34875
+12:29:12 40455
+12:29:14 26934
+12:29:16 82736 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:29:19 30583
+12:29:21 46572
+12:29:23 29938
+12:29:25 28114
+12:29:27 29938
+12:29:29 29402
+12:29:31 29938
+12:29:33 41636
+12:29:35 88208 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:29:38 28114
+12:29:40 33695
+12:29:42 29938
+12:29:44 26934
+12:29:46 31227
+12:29:48 34232
+12:29:50 111495 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:29:53 29402
+12:29:55 29938
+12:29:57 33695
+12:29:59 41636
+12:30:01 30583
+12:30:03 34875
+12:30:05 44103
+12:30:07 86921 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:30:10 33050
+12:30:12 34232
+12:30:14 29938
+12:30:16 29938
+12:30:18 29938
+12:30:20 30583
+12:30:22 29402
+12:30:24 82629 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:30:27 34875
+12:30:29 31227
+12:30:31 35519
+12:30:33 43460
+12:30:35 33050
+12:30:37 61273 /usr/bin/harbour-sailorgram -daemon
+12:30:39 33695
+12:30:41 82092 /usr/bin/harbour-sailorgram -daemon
+12:30:44 32407
+12:30:46 29402
+12:30:48 37344
+12:30:50 33050
+12:30:52 25646
+12:30:54 42280
+12:30:56 161716 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:30:59 29938
+12:31:01 44640
+12:31:03 33050
+12:31:05 30583
+12:31:07 31763
+12:31:09 66102 /usr/bin/harbour-sailorgram -daemon
+12:31:11 26291
+12:31:13 78336 /usr/bin/harbour-sailorgram -daemon
+12:31:16 34875
+12:31:18 35519
+12:31:20 37344
+12:31:22 29938
+12:31:24 28114
+12:31:26 56338
+12:31:28 32407
+12:31:30 119436 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:31:33 29402
+12:31:35 42816
+12:31:37 29402
+12:31:39 28758
+12:31:41 29402
+12:31:43 82092 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:31:46 34232
+12:31:48 29402
+12:31:50 30583
+12:31:52 116431 /usr/bin/harbour-sailorgram -daemon
+12:31:54 31763
+12:31:56 29938
+12:31:58 28114
+12:32:00 120617 /usr/bin/harbour-sailorgram -daemon
+12:32:03 30583
+12:32:05 29402
+12:32:07 30583
+12:32:09 26291
+12:32:11 37344
+12:32:13 28758
+12:32:15 28066
+12:32:17 45850
+12:32:19 28066
+12:32:21 26888
+12:32:24 28709
+12:32:26 80666 /usr/bin/harbour-sailorgram -daemon
+12:32:28 29351
+12:32:30 34815
+12:32:32 60526 /usr/bin/harbour-sailorgram -daemon
+12:32:35 77666 /usr/bin/harbour-sailorgram -daemon
+12:32:37 28709
+12:32:39 30531
+12:32:41 40921
+12:32:43 79487 /usr/bin/harbour-sailorgram -daemon
+12:32:46 81308 /usr/bin/harbour-sailorgram -daemon
+12:32:48 24424
+12:32:50 26888
+12:32:52 65989 /usr/bin/harbour-sailorgram -daemon
+12:32:54 28066
+12:32:56 28709
+12:32:58 83772 /usr/bin/harbour-sailorgram -daemon
+12:33:01 32351
+12:33:03 27424
+12:33:05 28709
+12:33:07 27424
+12:33:09 21960
+12:33:11 26246
+12:33:13 28709
+12:33:15 28709
+12:33:17 46385
+12:33:20 67811 /usr/bin/harbour-sailorgram -daemon
+12:33:22 31709
+12:33:24 25602
+12:33:26 27424
+12:33:28 32351
+12:33:30 49492
+12:33:32 71453 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:33:35 25066
+12:33:37 29887
+12:33:39 31173
+12:33:41 35994
+12:33:43 29351
+12:33:45 34173
+12:33:47 29351
+12:33:49 29887
+12:33:51 33529
+12:33:53 28709
+12:33:55 86772 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:33:58 31709
+12:34:00 43385
+12:34:02 28709
+12:34:04 28709
+12:34:06 31173
+12:34:08 59240
+12:34:10 103269 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:34:13 25602
+12:34:15 28709
+12:34:17 25602
+12:34:19 36636
+12:34:21 32994
+12:34:23 29351
+12:34:25 26888
+12:34:27 29887
+12:34:29 29887
+12:34:32 28066
+12:34:34 28066
+12:34:36 114947 /usr/bin/harbour-sailorgram -daemon
+12:34:38 28709
+12:34:40 108840 /usr/bin/harbour-sailorgram -daemon
+12:34:43 45850
+12:34:45 28709
+12:34:47 30531
+12:34:49 31709
+12:34:51 29887
+12:34:53 29887
+12:34:55 25066
+12:34:57 32351
+12:34:59 31816
+12:35:01 27531
+12:35:04 36636
+12:35:06 102734 /usr/bin/harbour-sailorgram -daemon
+12:35:08 47670
+12:35:10 88701 /usr/bin/harbour-sailorgram -daemon
+12:35:13 35458
+12:35:15 30531
+12:35:17 31173
+12:35:19 32351
+12:35:21 40385
+12:35:23 34815
+12:35:25 32351
+12:35:27 36101
+12:35:29 32994
+12:35:31 80772 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:35:34 35458
+12:35:36 31816
+12:35:38 32351
+12:35:40 47028
+12:35:42 80772 /usr/bin/harbour-sailorgram -daemon
+12:35:44 31816
+12:35:47 32994
+12:35:49 31816
+12:35:51 56884
+12:35:53 31816
+12:35:55 28066
+12:35:57 31816
+12:35:59 32994
+12:36:01 91700 /usr/bin/harbour-sailorgram -daemon
+12:36:03 29887
+12:36:05 98449 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:36:08 33637
+12:36:10 31816
+12:36:12 37280
+12:36:14 32994
+12:36:16 32351
+12:36:18 34815
+12:36:20 31816
+12:36:22 32351
+12:36:24 31173
+12:36:26 64811 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:36:29 89879 /usr/bin/harbour-sailorgram -daemon
+12:36:31 41565
+12:36:33 30531
+12:36:35 91164 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:36:38 34815
+12:36:40 29351
+12:36:42 34815
+12:36:44 31173
+12:36:46 31173
+12:36:48 29351
+12:36:50 31173
+12:36:52 29351
+12:36:54 29887
+12:36:56 31173
+12:36:58 34815
+12:37:01 69096 /usr/bin/harbour-sailorgram -daemon
+12:37:03 30531
+12:37:05 31173
+12:37:07 35458
+12:37:09 29351
+12:37:11 36636
+12:37:13 30531
+12:37:15 30531
+12:37:17 85058 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:37:20 32351
+12:37:22 32351
+12:37:24 84415 /usr/bin/harbour-sailorgram -daemon
+12:37:26 29351
+12:37:28 30531
+12:37:30 118696 /usr/bin/harbour-sailorgram -daemon
+12:37:33 31816
+12:37:35 29887
+12:37:37 29351
+12:37:39 31173
+12:37:41 39743
+12:37:43 47670
+12:37:45 32994
+12:37:47 32351
+12:37:49 37922
+12:37:52 94164 /usr/bin/harbour-sailorgram -daemon
+12:37:54 29887
+12:37:56 34815
+12:37:58 31173
+12:38:00 236107 /usr/lib/buteo-plugins-qt5//oopp/facebook-signon-client facebook-signon facebook.Signon-3 /usr/lib/buteo-plugins-qt5//oopp/syncemail-client syncemail syncemail-4
+12:38:02 253247 /usr/lib/buteo-plugins-qt5//oopp/facebook-notifications-client facebook-notifications facebook.Notifications-3 /usr/lib/buteo-plugins-qt5//oopp/facebook-signon-client facebook-signon facebook.Signon-3
+12:38:05 291277 /usr/lib/buteo-plugins-qt5//oopp/twitter-posts-client twitter-posts twitter.Posts-7 /usr/lib/buteo-plugins-qt5//oopp/twitter-notifications-client twitter-notifications twitter.Notifications-7
+12:38:07 99735 /usr/bin/harbour-sailorgram -daemon
+12:38:09 110661 /usr/bin/harbour-sailorgram -daemon
+12:38:11 74560 /usr/lib/buteo-plugins-qt5//oopp/twitter-notifications-client twitter-notifications twitter.Notifications-7
+12:38:13 96628 /usr/bin/harbour-sailorgram -daemon
+12:38:15 46492
+12:38:17 35458
+12:38:19 34173
+12:38:21 37280
+12:38:23 34815
+12:38:25 112590 /usr/bin/harbour-sailorgram -daemon
+12:38:28 32351
+12:38:30 64168 /usr/bin/harbour-sailorgram -daemon
+12:38:32 29887
+12:38:34 28709
+12:38:37 29887
+12:38:39 36101
+12:38:41 44671
+12:38:43 29351
+12:38:45 55062
+12:38:47 36636
+12:38:49 37280
+12:38:51 37280
+12:38:53 31816
+12:38:55 89879 /usr/bin/harbour-sailorgram -daemon
+12:38:58 39743
+12:39:00 28709
+12:39:02 29887
+12:39:04 44671
+12:39:06 31816
+12:39:08 31173
+12:39:10 26246
+12:39:12 32351
+12:39:14 72738 /usr/bin/harbour-sailorgram -daemon
+12:39:16 37280
+12:39:19 34815
+12:39:21 97271 /usr/bin/harbour-sailorgram -daemon
+12:39:23 31173
+12:39:25 31816
+12:39:27 36636
+12:39:29 37280
+12:39:31 30531
+12:39:33 31173
+12:39:35 33637
+12:39:37 35458
+12:39:39 37922
+12:39:41 29351
+12:39:44 59348
+12:39:46 83772 /usr/bin/harbour-sailorgram -daemon
+12:39:48 89879 /usr/bin/harbour-sailorgram -daemon
+12:39:50 131551 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:39:53 28066
+12:39:55 31816
+12:39:57 36101
+12:39:59 87415 /usr/bin/harbour-sailorgram -daemon
+12:40:01 74560 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:40:04 33637
+12:40:06 39743
+12:40:08 33637
+12:40:10 34173
+12:40:12 27531
+12:40:14 31816
+12:40:16 34815
+12:40:18 33637
+12:40:20 107662 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:40:23 34173
+12:40:25 30531
+12:40:27 37280
+12:40:29 31173
+12:40:31 38458
+12:40:33 30531
+12:40:35 37280
+12:40:37 48314
+12:40:39 33637
+12:40:41 37280
+12:40:44 32351
+12:40:46 33637
+12:40:48 31173
+12:40:50 30531
+12:40:52 32351
+12:40:54 139478 /usr/bin/harbour-sailorgram -daemon
+12:40:56 34173
+12:40:58 45850
+12:41:00 132729 /usr/bin/harbour-sailorgram -daemon
+12:41:03 80772 /usr/bin/harbour-sailorgram -daemon
+12:41:05 39100
+12:41:07 36636
+12:41:09 29351
+12:41:11 31173
+12:41:13 31173
+12:41:16 89879 /usr/bin/harbour-sailorgram -daemon
+12:41:18 33637
+12:41:20 31816
+12:41:22 56241
+12:41:24 33637
+12:41:26 34815
+12:41:28 38458
+12:41:30 168189 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:41:33 31173
+12:41:35 35458
+12:41:37 29887
+12:41:39 32351
+12:41:41 60526 /usr/bin/harbour-sailorgram -daemon
+12:41:43 29887
+12:41:45 88057 /usr/bin/harbour-sailorgram -daemon
+12:41:48 31816
+12:41:50 34815
+12:41:52 29351
+12:41:54 62990 /usr/bin/harbour-sailorgram -daemon
+12:41:56 50777
+12:41:59 64168 /usr/bin/harbour-sailorgram -daemon
+12:42:01 42743
+12:42:03 37922
+12:42:05 30531
+12:42:07 29351
+12:42:09 29351
+12:42:11 30531
+12:42:13 86236 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:42:16 31173
+12:42:18 138300 /usr/bin/harbour-sailorgram -daemon
+12:42:20 30531
+12:42:22 30531
+12:42:24 98449 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:42:27 36101
+12:42:29 48314
+12:42:31 36636
+12:42:33 29887
+12:42:35 32351
+12:42:37 32994
+12:42:39 32351
+12:42:41 29351
+12:42:43 32351
+12:42:45 85594 /usr/bin/harbour-sailorgram -daemon
+12:42:48 45207
+12:42:50 32351
+12:42:52 32351
+12:42:54 34815
+12:42:56 113125 /usr/bin/harbour-sailorgram -daemon
+12:42:59 85594 /usr/bin/harbour-sailorgram -daemon
+12:43:01 38458
+12:43:03 40921
+12:43:05 31816
+12:43:07 28066
+12:43:09 32994
+12:43:11 32994
+12:43:13 31816
+12:43:15 108305 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:43:18 34173
+12:43:20 36636
+12:43:22 32994
+12:43:24 30531
+12:43:26 31816
+12:43:28 113768 /usr/bin/harbour-sailorgram -daemon
+12:43:31 100913 /usr/bin/harbour-sailorgram -daemon
+12:43:33 32351
+12:43:35 29351
+12:43:37 27531
+12:43:39 86236 /usr/bin/harbour-sailorgram -daemon
+12:43:41 78309 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:43:44 32351
+12:43:46 30531
+12:43:48 32994
+12:43:50 69738 /usr/bin/harbour-sailorgram -daemon
+12:43:52 88057 /usr/bin/harbour-sailorgram -daemon /usr/bin/jolla-camera
+12:43:55 34815

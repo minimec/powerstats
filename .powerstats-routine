@@ -1,0 +1,339 @@
+#!/bin/bash
+
+##############
+## DEFAULTS ## 
+##############
+sleep 10
+DIRECTORY=/home/nemo/powerstats-report/
+TITLE=$2
+INTERVAL=$3
+MINUTES=$4
+MEASURES=$(($MINUTES*60/$INTERVAL))
+PROCESSLOG=$5
+HIGHMV=$PROCESSLOG"000"
+NOTIFICATION=$6
+DATE=$(date +%Y-%m-%d-%Hh%Mm%Ss)
+FREQSTAR=""
+
+# Interfaces
+PROVIDER=""
+MDATA=""
+MCONNECT=""
+WDATA=""
+WCONNECT=""
+GPOWER=""
+GCONNECT=""
+BPOWER=""
+BCONNECT=""
+
+# Check if report folder exists
+if [ ! -d $DIRECTORY ]; then
+    mkdir $DIRECTORY
+fi
+
+if [ "$(connmanctl services | grep cellular | awk '{print $1; exit}')" == "" ] ; then 
+    PROVIDER="No SIM Card"
+    MDATA="not available" 
+fi
+if [ "$(connmanctl services | grep cellular | awk '{print $1; exit}')" == "*" ] ; then 
+    PROVIDER=$(connmanctl services | grep cellular | awk '{print $2; exit}')  
+    MDATA="disabled"
+fi
+if [ "$(connmanctl services | grep cellular | awk '{print $1; exit}')" == "*A" ] ; then 
+    PROVIDER=$(connmanctl services | grep cellular | awk '{print $2; exit}') 
+    MDATA="enabled"
+    MCONNECT="disconnected"
+fi
+if [ "$(connmanctl services | grep cellular | awk '{print $1; exit}')" == "*AO" ] ; then 
+    PROVIDER=$(connmanctl services | grep cellular | awk '{print $2; exit}') 
+    MDATA="enabled"
+    MCONNECT="connected"
+fi
+if [ "$(connmanctl services | grep wifi | awk '{print $1; exit}')" == "*" ] ; then 
+    WDATA="disabled"
+fi
+if [ "$(connmanctl services | grep wifi | awk '{print $1; exit}')" == "*A" ] ; then 
+    WDATA="enabled"
+    WCONNECT="disconnected"
+fi
+if [ "$(connmanctl services | grep wifi | awk '{print $1; exit}')" == "*AO" ] ; then 
+    WDATA="enabled"
+    WCONNECT="connected"
+fi
+if [ "$(connmanctl technologies | sed -n -e '/gps/,+5p' | grep Powered | awk '{print $3; exit}')" == "False" ] ; then
+    GPOWER="disabled"
+else
+    GPOWER="enabled"
+fi
+if [ "$(connmanctl technologies | sed -n -e '/gps/,+5p' | grep Connected | awk '{print $3; exit}')" == "False" ] ; then
+    GCONNECT="disconnected"
+else
+    GCONNECT="connected"
+fi
+if [ "$(connmanctl technologies | sed -n -e '/bluetooth/,+5p' | grep Powered | awk '{print $3; exit}')" == "False" ] ; then
+    BPOWER="disabled"
+else
+    BPOWER="enabled"
+fi
+if [ "$(connmanctl technologies | sed -n -e '/bluetooth/,+5p' | grep Connected | awk '{print $3; exit}')" == "False" ] ; then
+    BCONNECT="disconnected"
+else
+    BCONNECT="connected"
+fi
+# Get current running applications at start
+ps aux | grep jolla- | cut -c 66- > /dev/shm/powerstats-apps  
+ps aux | grep sailfish- | cut -c 66- >> /dev/shm/powerstats-apps  
+ps aux | grep harbour- | cut -c 66- >> /dev/shm/powerstats-apps  
+ps aux | grep sfdroid | cut -c 66- >> /dev/shm/powerstats-apps  
+sed -i '/invoker/d' /dev/shm/powerstats-apps  
+sed -i '/signon/d' /dev/shm/powerstats-apps  
+sed -i '/sfdroid.sh/d' /dev/shm/powerstats-apps  
+sed -i '/grep/d' /dev/shm/powerstats-apps 
+
+# CPU Managment function
+cpumanagment() {
+ if [ -f "/system/bin/mpdecision" ] ; then
+     CPUMANAGARRAY+=('mpdecision')
+     CPUMANAG=default
+ fi
+ if [ $(cat /sys/class/misc/mako_hotplug_control/enabled) == "1" ] ; then # Mako
+     CPUMANAGARRAY+=('mako')
+     CPUMANAG=custom
+     FREQSTAR=*
+     FREQSTARNOTE="##   *(may be handled by custom CPU managment)"
+ fi
+ if [ $(cat /sys/kernel/alucard_hotplug/hotplug_enable) == "1" ] ; then # alucard
+     CPUMANAGARRAY+=('alucard')
+     CPUMANAG=custom
+     FREQSTAR=*
+     FREQSTARNOTE="##   *(may be handled by custom CPU managment)"
+ fi
+ if [ $(cat /sys/module/blu_plug/parameters/enabled) == "1" ] ; then # blu_plug
+     CPUMANAGARRAY+=('blu_plug')
+     CPUMANAG=custom
+     FREQSTAR=*
+     FREQSTARNOTE="##   *(may be handled by custom CPU managment)"
+ fi
+ if [ $(cat /sys/devices/platform/msm_sleeper/enabled) == "1" ] ; then # msn_sleeper
+     CPUMANAGARRAY+=('msn_sleeper')
+     CPUMANAG=custom
+     FREQSTAR=*
+     FREQSTARNOTE="##   *(may be handled by custom CPU managment)"
+ fi
+ if [ $(cat /sys/kernel/zen_decision/enabled) == "1" ] ; then # zen_decision
+     CPUMANAGARRAY+=('zen_decision')
+     CPUMANAG=custom
+     FREQSTAR=*
+     FREQSTARNOTE="##   *(may be handled by custom CPU managment)"
+ fi
+ if [ $(cat /sys/kernel/msm_mpdecision/conf/enabled) == "1" ] ; then # msm_mpdecision
+     CPUMANAGARRAY+=('msm_mpdecision')
+     CPUMANAG=custom
+     FREQSTAR=*
+     FREQSTARNOTE="##   *(may be handled by custom CPU managment)"
+ fi
+}
+
+## Phone Interfaces function
+#interfaces() {
+#
+#}
+
+# Notification
+notification() {
+ if [ "$NOTIFICATION" -eq "1" ] ; then
+    timedclient-qt5 -b'TITLE=BatteryStatsCompleted' -e'APPLICATION=powerstats;TITLE=Battery Stats Completed;ticker=1'
+ fi
+} 
+
+# Remove obsolete files
+remove() {
+ # Remove obsolete file
+ rm /dev/shm/powerstats-analyse
+ rm /dev/shm/powerstats-data
+ rm /dev/shm/powerstats-apps 
+}
+
+##############
+### REPORT ###
+##############
+report() {
+
+ ## PRESETS
+ # Copy data file
+ cp /dev/shm/powerstats-data /dev/shm/powerstats-analyse
+ # How many polls?
+ POLLS=$(cat /dev/shm/powerstats-analyse | wc -l)
+ # Reset variables
+ N=0
+ STATSARRAY=()
+
+ ## ANALYSE DATA
+ # Loop as long as file is not empty
+ while [ -s /dev/shm/powerstats-analyse ] ; do
+     # current voltage filter
+     MINIVOLT=$N"000"
+     # Analyse file to filter data with given voltage filter
+     foo=$(awk '$2<'$MINIVOLT'{count++} END {print count}' /dev/shm/powerstats-analyse)
+         # if result != 'null' --> add to Array (two values!)
+         if [ "$foo" != "" ] ; then
+             STATSARRAY+=("$N")
+             STATSARRAY+=("$foo")
+         fi
+     # Cut out analysed data from file
+     awk '$2>='$MINIVOLT' {print}' /dev/shm/powerstats-analyse > /dev/shm/powerstats-analyse-while
+     mv /dev/shm/powerstats-analyse-while /dev/shm/powerstats-analyse
+     # increment variable for MINIVOLT/STATSARRAY 
+     N=$((N+10))
+ done
+
+ ## GENERATE STATISTICS
+ # CPU managment --> function cpumanagment()
+ cpumanagment 
+ # Phone Interfaces
+ # interfaces
+ # Voltage table
+ if [ "$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor | grep 1050)" != "" ] ; then
+     VOTABLE=default
+ else
+     VOTABLE=modified
+ fi
+ # FREQ/CPUGOV
+ MINFREQ=$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq)
+ MAXFREQ=$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq) 
+ CPUGOV=$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor)
+
+ # Generate report header
+ echo "##############################" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   ,---" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   | Phone Info" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   '---" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   Phone model: " $(getprop ro.product.model) >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   Device name: " $(getprop ro.product.device) >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   Mod version: " $(getprop ro.modversion) "["$(getprop ro.build.id)"]" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   OS version:  " $(version) >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ if [ -f "/android/media/0/multirom" ] ; then ITYPE=native; else ITYPE=multirom; fi;
+ echo "##   Install Type:" $ITYPE >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   ,---" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   | Current Phone Settings" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   '---" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   CPU Managment: " $CPUMANAG "("${CPUMANAGARRAY[@]}")" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   Min/Max Freq:  " $MINFREQ$FREQSTAR"/"$MAXFREQ$FREQSTAR >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   Voltage Table: " $VOTABLE >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   CPU Governor:  " $CPUGOV >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+
+ # Additional notes, if a custom CPU Managment is used
+ if [[ ${FREQSTARNOTE:+1} ]]; then echo "$FREQSTARNOTE" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log; fi;
+ if [ ${#CPUMANAGARRAY[@]} -gt 1 ] ; then
+     CPUMANAGALERT="##   !(WARNING: more than one cpu manager enabled)"
+     echo "$CPUMANAGALERT" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ fi
+
+ echo "##" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   Cell Provider: " $PROVIDER >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   Mobile Data:   " $MDATA"/"$MCONNECT >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   Wireless:      " $WDATA"/"$WCONNECT >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   Bluetooth:     " $BPOWER"/"$BCONNECT >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   GPS Receiver:  " $GPOWER"/"$GCONNECT >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   ,---" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   | Running Applications" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   '---" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+
+ # Generate list of open applications
+ while read i; do echo "##   $i" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log ; done </dev/shm/powerstats-apps  
+
+ echo "##" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   ,---" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   | Power Statistics (Duration: "$MINUTES"min.) [Start: "$DATE"]" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   '---" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+
+ # HASHBAR (POLL STATS)
+ # Hashbars function (Statistics)
+ printf_new() {
+  str=$1
+  num=$2
+  v=$(printf "%-${num}s" "$str")
+  # Generate print line
+  echo "##   below "${STATSARRAY[i]}"mV: "$num"% ("${STATSARRAY[i+1]}" polls)" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+  echo "##   ${v// /#}" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ } 
+ # Take values from array (always two values per loop)
+ for ((i=0; i<${#STATSARRAY[@]}; i+=2)); do
+     # Calculate Percentage
+     ITEM=${STATSARRAY[i+1]}
+     percent=$(awk "BEGIN { pc=100*${ITEM}/${POLLS}; z=int(pc); print (pc-z<0.5)?z:z+1 }")
+     # Print Statistics with function 'printf_new'
+     printf_new "#" $percent
+ done
+
+ # Add poll data / Remarks
+ echo "##" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   ,---" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   | Raw Poll Data" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   '---" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log 
+ echo "##   You can find the Raw measurement data at the end of this report." >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   If the poll is higher than "$PROCESSLOG"mV, the most active process is logged." >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   This file can be plotted as graphic with gnuplot." >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   EXAMPLE:" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   gnuplot> set xdata time" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   gnuplot> set timefmt \"%H:%M:%S\"" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##   gnuplot> plot \"powerstats-report_2016-11-29-19h37m40s_idle\" using 1:2" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ echo "##############################" >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log
+ cat /dev/shm/powerstats-data >> /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}.log 
+}
+
+
+##########################
+## START / DATA ROUTINE ##
+##########################
+# 'get data' function
+getStat() {
+ CurrNow=$(cat /sys/class/power_supply/battery/current_now)
+ CurrTime=$(date +%H:%M:%S)
+ if [ $CurrNow -gt $HIGHMV ] ; then
+     HighCpu=$(ps aux | sort -nrk 3,3 | head -n 2 | sed '/aux/d' | cut -c 66-)
+ else
+     HighCpu=
+ fi
+ echo $CurrTime $CurrNow $HighCpu >> /dev/shm/powerstats-data
+}
+
+# Start/Poll loop
+start() {
+ while true; do getStat;
+ counter=$((counter+1)) 
+ test "$counter" -eq "$MEASURES" && report && notification && remove && break;
+ sleep $INTERVAL;
+ done
+}
+
+##########
+## STOP ##
+##########
+stop() {
+ rm /dev/shm/powerstats-apps
+ mv /dev/shm/powerstats-data /home/nemo/powerstats-report/powerstats-report_${DATE}_${TITLE}_aborted.log
+ echo "Script aborted!"
+ pkill powerstats
+ pkill powerstats-routine
+ exit 0
+}
+
+####################
+## Launch options ##
+####################
+case "$1" in
+    start)
+	start
+	;;
+    stop)
+	stop
+	;;
+    *) exit 1
+esac
